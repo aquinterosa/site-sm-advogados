@@ -1,372 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sarturi & Mendes Advogados – Especialistas em Busca e Apreensão de Veículos. Atendimento em Porto Alegre/RS e Nacional. Fale conosco agora.">
-  <meta name="theme-color" content="#0A1628">
-  <title>Sarturi &amp; Mendes | Advogados — Busca e Apreensão de Veículos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM Advocacia | Sarturi & Mendes - Especialistas em Busca e Apreensão</title>
+    <meta name="description" content="Escritório jurídico premium especializado em recuperação de veículos, direito imobiliário e contencioso bancário. De Porto Alegre para todo o Brasil.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #0A1628; /* Azul Profundo */
+            --accent-gold: #C9A227;   /* Dourado Premium */
+            --text-dark: #333333;
+            --text-light: #F4F4F4;
+            --whatsapp-green: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Lato', sans-serif; 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+        }
+
+        h1, h2, h3, h4 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--primary-color); 
+        }
+
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- Header --- */
+        header {
+            background: var(--primary-color);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        
+        .logo span { color: var(--accent-gold); }
+
+        nav ul { display: flex; gap: 30px; }
+        nav ul li a { color: var(--text-light); font-weight: 500; font-size: 0.9rem; letter-spacing: 1px; }
+        nav ul li a:hover { color: var(--accent-gold); }
+
+        .btn-header {
+            background: var(--accent-gold);
+            color: var(--primary-color) !important;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold !important;
+        }
+
+        /* --- Hero Section (Premium Realista) --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 22, 40, 0.7), rgba(10, 22, 40, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding-top: 80px;
+        }
+
+        .hero-content { max-width: 800px; }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            background: var(--whatsapp-green);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-light);
+            padding: 18px 40px;
+            border: 2px solid var(--text-light);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+        .btn-secondary:hover { background: var(--text-light); color: var(--primary-color); }
+
+        /* --- Services / Methodology --- */
+        .services { padding: 100px 0; background: #fff; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 15px; }
+        .section-title .line { width: 80px; height: 3px; background: var(--accent-gold); margin: 0 auto; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 40px 20px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-icon { font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px; }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+
+        /* --- Team Section (Realistic Photos) --- */
+        .team { padding: 100px 0; background: #f9f9f9; }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .team-member {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .member-img {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .member-info { padding: 30px; }
+        .member-info h3 { font-size: 1.8rem; margin-bottom: 5px; }
+        .member-oab { color: var(--accent-gold); font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+        .member-bio { font-size: 1rem; color: #555; margin-bottom: 20px; }
+        .member-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+        .tag { background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; color: var(--primary-color); }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .footer-col h4 { color: var(--accent-gold); margin-bottom: 20px; font-size: 1.2rem; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #ccc; }
+        .footer-links a:hover { color: var(--accent-gold); }
+        
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp-green);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified mobile menu logic would go here */
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ===================== HEADER FIXO ===================== -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <!-- Logo -->
-      <a href="#" class="header__logo">
-        <span class="logo-letter" aria-hidden="true">S</span><span class="logo-amp">&amp;</span><span class="logo-letter" aria-hidden="true">M</span>
-        <span class="logo-label">Advogados</span>
-      </a>
-
-      <!-- Navegação -->
-      <nav class="header__nav" id="main-nav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#metodo" class="nav-link">Como Funciona</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
-          <li><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </nav>
-
-      <!-- CTA Header Desktop -->
-      <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--sm header__cta-desktop">
-        <svg class="icon-wpp icon-sm" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.136-1.413-.11-.124-.411-.198-.709-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945.01.017.013.033.022.048l.01.02v.004l.016.036.003.007.018.063.007.025.005.013.002.02.004.082v.022l.018.29.01.03.045.107.016.034c.057.123.133.24.216.346l.022.028c.478.626 1.048 1.164 1.685 1.588l.036.022c1.83 1.077 3.913 1.648 6.047 1.648h.006c6.554 0 11.89-5.335 11.893-11.892a11.821 11.821 0 00-3.56-8.413z"/></svg>
-        WhatsApp
-      </a>
-
-      <!-- Hamburger Menu -->
-      <button class="header__menu-btn" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- ===================== HERO SECTION ===================== -->
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__gradient" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Especialistas em Direito Veicular e Bancário</p>
-        <h1 class="hero__headline" id="hero-title">Seu veículo foi apreendido? <br><span class="text-gold">Nós recuperamos.</span></h1>
-        <p class="hero__sub">Atuação rápida e estratégica para quem tem veículos retidos pela justiça ou enfrenta execuções bancárias. Atendimento em Porto Alegre/RS e em todo o Brasil.</p>
-        <div class="hero__buttons">
-          <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg">
-            <svg class="icon-wpp icon-md" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.136-1.413-.11-.124-.411-.198-.709-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945.01.017.013.033.022.048l.01.02v.004l.016.036.003.007.018.063.007.025.005.013.002.02.004.082v.022l.018.29.01.03.045.107.016.034c.057.123.133.24.216.346l.022.028c.478.626 1.048 1.164 1.685 1.588l.036.022c1.83 1.077 3.913 1.648 6.047 1.648h.006c6.554 0 11.89-5.335 11.893-11.892a11.821 11.821 0 00-3.56-8.413z"/></svg>
-            Falar com Advogado Agora
-          </a>
-          <a href="tel:+5551999999999" class="btn btn--outline btn--lg">
-            <svg class="icon-phone icon-md" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Ligar (51) 99999-9999
-          </a>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">SM <span>ADVOCACIA</span></a>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#profissionais">Equipe</a></li>
+                    <li><a href="#servicos">Especialidades</a></li>
+                    <li><a href="#contato" class="btn-header">WhatsApp</a></li>
+                </ul>
+            </nav>
         </div>
-        <p class="hero__trust">Respondemos em até <strong>30 minutos</strong> via WhatsApp · Análise gratuita e sigilosa</p>
-      </div>
+    </header>
+
+    <!-- Hero Section with Realistic Executive Office Photo -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>Preservação do seu Patrimônio com Soluções Jurídicas Ágeis</h1>
+            <p>Especialistas em Busca e Apreensão de Veículos. Atuação estratégica de Porto Alegre para todo o Brasil.</p>
+            
+            <div class="hero-buttons">
+                <a href="https://wa.me/5551999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta." class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> Falar com Especialista
+                </a>
+                <a href="tel:+555133334444" class="btn-secondary">
+                    <i class="fas fa-phone"></i> Ligar para o Escritório
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- ===================== BARRA DE PROVA SOCIAL ===================== -->
-    <section class="social-proof" aria-label="Estatísticas de prova social">
-      <div class="container social-proof__inner">
-        <div class="proof-item">
-          <span class="proof-number">2.500+</span>
-          <span class="proof-label">Veículos Recuperados</span>
+    <!-- Team Section (Profissionais Responsáveis) -->
+    <section id="profissionais" class="team">
+        <div class="section-title">
+            <h2>Nossos Profissionais Responsáveis</h2>
+            <div class="line"></div>
         </div>
-        <span class="proof-divider" aria-hidden="true"></span>
-        <div class="proof-item">
-          <span class="proof-number">97%</span>
-          <span class="proof-label">Taxa de Sucesso</span>
+
+        <div class="team-grid">
+            <!-- Dra. Michele Sarturi -->
+            <div class="team-member">
+                <!-- Placeholder for her professional photo -->
+                <div class="member-img" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="member-info">
+                    <h3>Dra. Michele Sarturi da Silva</h3>
+                    <span class="member-oab">OAB/RS XXXXX</span>
+                    <p class="member-bio">
+                        Especialista em contencioso criminal e blindagem patrimonial. Com sólida formação na Justiça Militar e Federal, atua na resolução estratégica de altas complexidades, focando na proteção de ativos e direitos sob qualquer esfera de litígio.
+                    </p>
+                    <div class="member-tags">
+                        <span class="tag">Direito Criminal</span>
+                        <span class="tag">Regularização Imobiliária</span>
+                        <span class="tag">Direito Administrativo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dra. Anna Paula Mendes -->
+            <div class="team-member">
+                <!-- Placeholder for her professional photo -->
+                <div class="member-img" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80');"></div>
+                <div class="member-info">
+                    <h3>Dra. Anna Paula Mendes Oliveira</h3>
+                    <span class="member-oab">OAB/RS XXXXX</span>
+                    <p class="member-bio">
+                        Referência técnica em recuperação de crédito e gestão de riscos jurídicos para grandes carteiras. Reconhecida pela expertise no domínio das normas do RENAVE e soluções defensivas de altíssimo nível para blindagem patrimonial.
+                    </p>
+                    <div class="member-tags">
+                        <span class="tag">Expertise em RENAVE</span>
+                        <span class="tag">Litígios Bancários</span>
+                        <span class="tag">Recuperação de Ativos</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="proof-divider" aria-hidden="true"></span>
-        <div class="proof-item">
-          <span class="proof-number">15+</span>
-          <span class="proof-label">Anos de Experiência</span>
-        </div>
-        <span class="proof-divider" aria-hidden="true"></span>
-        <div class="proof-item">
-          <span class="proof-number">24h</span>
-          <span class="proof-label">Plantão Jurídico</span>
-        </div>
-      </div>
     </section>
 
-    <!-- ===================== SERVIÇOS ===================== -->
-    <section class="services section" id="servicos" aria-labelledby="servicos-title">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">Áreas de Atuação</p>
-          <h2 class="section-title" id="servicos-title">Soluções jurídicas com resultados <span class="text-gold">concretos</span></h2>
-          <p class="section-desc">Atuação especializada para resolver seu caso com eficiência, agilidade e segurança jurídica.</p>
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="section-title">
+            <h2>Áreas de Atuação Premium</h2>
+            <div class="line"></div>
         </div>
-
+        
         <div class="services-grid">
-
-          <!-- Card 1 -->
-          <article class="card card--service">
-            <div class="card__icon" aria-hidden="true">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div class="service-card">
+                <i class="fas fa-car service-icon"></i>
+                <h3>Busca e Apreensão Veicular</h3>
+                <p>Assessoria jurídica completa tanto para credores quanto devedores, assegurando a segurança jurídica de toda a operação.</p>
             </div>
-            <h3 class="card__title">Busca e Apreensão de Veículos</h3>
-            <p class="card__text">Defesa técnica e recuperação de veículos apreendidos por ordem judicial. Atuamos em todos os Estados do Brasil com expertise comprovada.</p>
-            <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="card__link">Quero recuperar meu veículo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card card--service">
-            <div class="card__icon" aria-hidden="true">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div class="service-card">
+                <i class="fas fa-home service-icon"></i>
+                <h3>Execução Imobiliária</h3>
+                <p>Gestão especializada de processos hipotecários e execuções de financiamento imobiliário buscando a melhor resolução.</p>
             </div>
-            <h3 class="card__title">Dívidas Bancárias e Financiamentos</h3>
-            <p class="card__text">Negociação estratégica, redução de juros abusivos e defesa contra execuções financeiras. Protegemos seu patrimônio e sua tranquilidade.</p>
-            <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="card__link">Analisar meu caso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card card--service">
-            <div class="card__icon" aria-hidden="true">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="service-card">
+                <i class="fas fa-gavel service-icon"></i>
+                <h3>Cobrança Títular</h3>
+                <p>Recuperação de crédito empresarial e pessoa física através das vias judiciais mais ágeis e seguras.</p>
             </div>
-            <h3 class="card__title">Tutela Urgente (Liminares)</h3>
-            <p class="card__text">Obtenção de liminares e tutelas antecipadas em tempo recorde. Quando cada hora conta, nossa resposta é imediata e decisiva.</p>
-            <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="card__link">Acionar agora <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card card--service">
-            <div class="card__icon" aria-hidden="true">
-              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h3 class="card__title">Recursos e Revisões Judiciais</h3>
-            <p class="card__text">Revisão de decisões e recursos em todas as instâncias. Lutamos pelo desentranhamento de apensos e reversão de sentenças.</p>
-            <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="card__link">Consultar recurso <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          </article>
-
         </div>
-      </div>
     </section>
 
-    <!-- ===================== MÉTODO / FLUXOGRAMA ===================== -->
-    <section class="method section" id="metodo" aria-labelledby="metodo-title">
-      <div class="container">
-        <div class="section-header">
-          <p class="section-eyebrow">Nosso Método</p>
-          <h2 class="section-title" id="metodo-title">Do primeiro contato à <span class="text-gold">recuperação total</span></h2>
-          <p class="section-desc">Um processo estruturado em quatro etapas para máxima eficiência na resolução do seu caso.</p>
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo">SM <span>ADVOCACIA</span></div>
+                <p style="margin-top: 15px; color: #ccc;">Excelência técnica e estratégia jurídica para proteger o que é seu.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Porto Alegre, RS</li>
+                    <li><i class="fas fa-phone"></i> (51) 3333-4444</li>
+                    <li><i class="fas fa-envelope"></i> contato@smadvocacia.com.br</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Especialidades</a></li>
+                    <li><a href="#profissionais">Equipe</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="method-flow">
-          <!-- Etapa 1 -->
-          <div class="step" data-step="1">
-            <div class="step__badge">PASSO 01</div>
-            <div class="step__icon-wrap">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <h3 class="step__title">Contato Imediato</h3>
-            <p class="step__desc">Você nos chama no WhatsApp. Em até 30 minutos, um advogado analisa seu caso e já orienta os próximos passos.</p>
-            <span class="step__tag">⏱ Resposta em 30 min</span>
-          </div>
-
-          <!-- Seta -->
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 12v20M18 24l6 6 6-6" stroke="var(--gold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-
-          <!-- Etapa 2 -->
-          <div class="step" data-step="2">
-            <div class="step__badge">PASSO 02</div>
-            <div class="step__icon-wrap">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            </div>
-            <h3 class="step__title">Análise Estratégica</h3>
-            <p class="step__desc">Estudamos toda a documentação, identificamos brechas processuais e montamos a estratégia jurídica mais eficiente.</p>
-            <span class="step__tag">📋 Plano em 24h</span>
-          </div>
-
-          <!-- Seta -->
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 12v20M18 24l6 6 6-6" stroke="var(--gold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-
-          <!-- Etapa 3 -->
-          <div class="step" data-step="3">
-            <div class="step__badge">PASSO 03</div>
-            <div class="step__icon-wrap">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <h3 class="step__title">Ação Judicial</h3>
-            <p class="step__desc">Entramos com a petição imediatamente. Priorizamos medidas cautelares e liminares urgentes.</p>
-            <span class="step__tag">⚡ Petição no mesmo dia</span>
-          </div>
-
-          <!-- Seta -->
-          <div class="step-arrow" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 12v20M18 24l6 6 6-6" stroke="var(--gold)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-
-          <!-- Etapa 4 -->
-          <div class="step step--result" data-step="4">
-            <div class="step__badge step__badge--result">PASSO 04</div>
-            <div class="step__icon-wrap step__icon-wrap--result">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="step__title">Recuperação Total</h3>
-            <p class="step__desc">Seu veículo liberado ou suas dívidas resolvidas. Alta satisfação com resultado garantido.</p>
-            <span class="step__tag">✅ 97% de sucesso</span>
-          </div>
-
+        <div class="copyright">
+            &copy; 2024 Sarturi & Mendes Advocacia. Todos os direitos reservados.
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <!-- ===================== SOBRE ===================== -->
-    <section class="about section" id="sobre" aria-labelledby="sobre-title">
-      <div class="container about__grid">
-        <div class="about__content">
-          <p class="section-eyebrow">Quem Somos</p>
-          <h2 class="section-title" id="sobre-title">Autoridade que se traduz em <span class="text-gold">resultados</span></h2>
-          <p class="about__text">O escritório <strong>Sarturi &amp; Mendes Advogados</strong> nasceu com uma missão clara: oferecer excelência jurídica especializada em direito veicular e bancário. Com mais de 15 anos de atuação, combinamos profundidade técnica com agilidade operacional.</p>
-          <p class="about__text">Sediados em Porto Alegre, atendemos clientes em todo o território nacional, oferecendo atendimento personalizado, transparente e focado em resultados concretos.</p>
-          <ul class="about__features">
-            <li>
-              <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Especialização exclusiva em Busca e Apreensão
-            </li>
-            <li>
-              <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Atendimento 24 horas para urgências
-            </li>
-            <li>
-              <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Cobertura nacional com base em Porto Alegre
-            </li>
-            <li>
-              <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              Primeira análise sem compromisso
-            </li>
-          </ul>
-        </div>
-        <div class="about__visual" aria-hidden="true">
-          <div class="about__plaque">
-            <div class="plaque__badge">
-              <span class="plaque__number">15+</span>
-              <span class="plaque__label">Anos</span>
-            </div>
-            <div class="plaque__stats">
-              <div class="plaque__stat">
-                <span class="plaque__value">2.500+</span>
-                <span class="plaque__caption">Casos Resolvidos</span>
-              </div>
-              <span class="plaque__sep" aria-hidden="true"></span>
-              <div class="plaque__stat">
-                <span class="plaque__value">97%</span>
-                <span class="plaque__caption">Taxa de Sucesso</span>
-              </div>
-            </div>
-            <div class="plaque__divider"></div>
-            <p class="plaque__oab">OAB/RS 45.678</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5551999999999?text=Olá,%20preciso%20de%20orientação%20jurídica." class="float-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <!-- ===================== CTA FINAL ===================== -->
-    <section class="cta-final section" id="contato" aria-labelledby="cta-title">
-      <div class="container cta-final__inner">
-        <div class="cta-final__content">
-          <p class="section-eyebrow">Não perca tempo</p>
-          <h2 class="cta-final__title" id="cta-title">Cada minuto importa quando<br>seu veículo está <span class="text-gold">apreendido</span></h2>
-          <p class="cta-final__text">Fale agora com um especialista. Atendimento gratuito, rápido e sigiloso em até 30 minutos.</p>
-          <div class="cta-final__buttons">
-            <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--xl">
-              <svg class="icon-wpp icon-lg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.136-1.413-.11-.124-.411-.198-.709-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945.01.017.013.033.022.048l.01.02v.004l.016.036.003.007.018.063.007.025.005.013.002.02.004.082v.022l.018.29.01.03.045.107.016.034c.057.123.133.24.216.346l.022.028c.478.626 1.048 1.164 1.685 1.588l.036.022c1.83 1.077 3.913 1.648 6.047 1.648h.006c6.554 0 11.89-5.335 11.893-11.892a11.821 11.821 0 00-3.56-8.413z"/></svg>
-              Chamar Advogado no WhatsApp
-            </a>
-            <a href="tel:+5551999999999" class="btn btn--outline-light btn--lg">
-              <svg class="icon-phone icon-md" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Ligar Agora
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <!-- Marca -->
-      <div class="footer__brand">
-        <a href="#" class="footer__logo">
-          <span class="logo-letter" aria-hidden="true">S</span><span class="logo-amp" aria-hidden="true">&amp;</span><span class="logo-letter" aria-hidden="true">M</span>
-          <span class="logo-label">Advogados</span>
-        </a>
-        <p class="footer__tagline">Especialistas em Busca e Apreensão de Veículos e Direito Bancário.</p>
-        <p class="footer__oab">OAB/RS 45.678</p>
-      </div>
-
-      <!-- Serviços -->
-      <div class="footer__col">
-        <h4>Serviços</h4>
-        <ul>
-          <li><a href="#servicos">Busca e Apreensão</a></li>
-          <li><a href="#servicos">Dívidas Bancárias</a></li>
-          <li><a href="#servicos">Tutela Urgente</a></li>
-          <li><a href="#servicos">Recursos Judiciais</a></li>
-        </ul>
-      </div>
-
-      <!-- Contato -->
-      <div class="footer__col footer__col--contact">
-        <h4>Contato</h4>
-        <ul>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (51) 99999-9999
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            contato@smadvogados.com.br
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Av. Independência, 2022 – Sala 15<br>
-            Santana do Portão / RS – CEP 92.310-000
-          </li>
-        </ul>
-      </div>
-
-      <!-- Links -->
-      <div class="footer__col">
-        <h4>Links Úteis</h4>
-        <ul>
-          <li><a href="#metodo">Como Funciona</a></li>
-          <li><a href="#sobre">Sobre Nós</a></li>
-          <li><a href="#">Política de Privacidade</a></li>
-          <li><a href="#">Termos de Uso</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2026 Sarturi &amp; Mendes Advogados. Todos os direitos reservados. OAB/RS 45.678</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===================== BOTÃO FLUTUANTE WHATSAPP ===================== -->
-  <a href="https://wa.me/5551999999999" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar com advogado no WhatsApp">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.136-1.413-.11-.124-.411-.198-.709-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945.01.017.013.033.022.048l.01.02v.004l.016.036.003.007.018.063.007.025.005.013.002.02.004.082v.022l.018.29.01.03.045.107.016.034c.057.123.133.24.216.346l.022.028c.478.626 1.048 1.164 1.685 1.588l.036.022c1.83 1.077 3.913 1.648 6.047 1.648h.006c6.554 0 11.89-5.335 11.893-11.892a11.821 11.821 0 00-3.56-8.413z"/></svg>
-    <span class="whatsapp-pulse" aria-hidden="true"></span>
-  </a>
-
-  <script src="script.js"></script>
 </body>
 </html>
